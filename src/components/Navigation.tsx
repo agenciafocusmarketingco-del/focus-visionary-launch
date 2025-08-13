@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import focusLogo from '@/assets/focus-logo.png';
+import focusLogo from '/lovable-uploads/99c17306-6018-4eac-af3b-8ead6992dd8f.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
