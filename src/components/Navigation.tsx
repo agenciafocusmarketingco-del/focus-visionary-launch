@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import focusLogo from '@/assets/focus-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo with premium styling */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-black tracking-tight">
-              Focus<span className="gradient-text">Marketing</span>
-            </span>
+            <img 
+              src={focusLogo} 
+              alt="Focus Marketing - Agência de Marketing Digital" 
+              className="h-12 w-auto transition-all duration-300 hover:scale-105"
+            />
           </div>
 
           {/* Desktop Navigation */}
