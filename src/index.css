@@ -8,50 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
+    /* Focus Marketing Dark Theme - Starlink inspired */
+    --background: 0 0% 4.3%; /* #0B0B0B */
+    --foreground: 0 0% 93%; /* #EDEDED */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card: 0 0% 6.7%; /* #111 */
+    --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 0 0% 10.2%; /* #1A1A1A */
+    --popover-foreground: 0 0% 93%;
 
-    /* Focus Orange - Vibrant primary color */
-    --primary: 22 100% 55%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 22 100% 65%;
+    /* Focus Orange - Primary brand color */
+    --primary: 22 100% 51%; /* #FF6A00 */
+    --primary-foreground: 0 0% 4.3%;
+    --primary-glow: 22 100% 61%;
 
-    /* Deep Black - Sophistication */
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 98%;
+    /* Dark grays for hierarchy */
+    --secondary: 0 0% 10.2%; /* #1A1A1A */
+    --secondary-foreground: 0 0% 93%;
 
-    /* Muted tones */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    /* Muted tones for subtle elements */
+    --muted: 0 0% 6.7%; /* #111 */
+    --muted-foreground: 0 0% 60%;
 
     /* Accent variations */
-    --accent: 22 85% 92%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 0 0% 10.2%;
+    --accent-foreground: 0 0% 93%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 94%;
-    --ring: 22 100% 55%;
+    --border: 0 0% 10.2%;
+    --input: 0 0% 6.7%;
+    --ring: 22 100% 51%;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(22 100% 55%), hsl(22 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(22 100% 55%) 0%, hsl(0 0% 8%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    /* Focus gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(22 100% 51%), hsl(22 100% 61%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4.3%) 0%, hsl(0 0% 6.7%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4.3%) 0%, hsl(0 0% 10.2%) 100%);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(22 100% 55% / 0.3);
-    --shadow-premium: 0 20px 60px hsl(0 0% 0% / 0.1);
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.08);
+    /* Shadows with orange glow */
+    --shadow-glow: 0 0 40px hsl(22 100% 51% / 0.3);
+    --shadow-premium: 0 20px 60px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.4);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -129,18 +130,33 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Hero button with glow effect */
+  /* Focus Marketing components - Starlink inspired */
+  
+  /* Hero button with orange glow */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-lg font-semibold tracking-wide;
-    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold tracking-wide text-lg;
+    @apply transform transition-all duration-300 hover:scale-105;
     box-shadow: var(--shadow-glow);
   }
   
-  /* Premium card style */
-  .card-premium {
-    @apply bg-card border border-border rounded-xl p-6;
+  /* Secondary button - outline style */
+  .btn-secondary {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-lg font-semibold tracking-wide;
+    @apply transform transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+  
+  /* Premium service card */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-8;
+    @apply transform transition-all duration-500 hover:scale-105 hover:border-primary/50;
     box-shadow: var(--shadow-card);
-    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  /* Portfolio card with hover effect */
+  .portfolio-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden;
+    @apply transform transition-all duration-300 hover:scale-105 hover:border-primary/50;
+    box-shadow: var(--shadow-card);
   }
   
   /* Gradient text effect */
@@ -151,9 +167,31 @@ All colors MUST be HSL.
     background-clip: text;
   }
   
-  /* Section spacing */
-  .section-padding {
-    @apply py-20 px-4 lg:px-8;
+  /* Section with proper spacing */
+  .section-container {
+    @apply py-20 px-4 lg:px-8 max-w-7xl mx-auto;
+  }
+  
+  /* Typography scales */
+  .heading-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+  }
+  
+  .heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-xl md:text-2xl font-semibold tracking-wide;
+  }
+  
+  /* Glass effect */
+  .glass-effect {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
   }
 }
 

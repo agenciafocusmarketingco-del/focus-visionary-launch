@@ -1,120 +1,71 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  TrendingUp, 
-  Video, 
-  Bot, 
-  BarChart3, 
-  Megaphone, 
-  Code, 
-  Database, 
-  Clapperboard,
-  ArrowRight 
-} from 'lucide-react';
+/**
+ * ServicesSection - Core services offered by Focus Marketing
+ */
+
+import { Target, Palette, Zap, Globe, BarChart3 } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
-      category: 'Marketing & Growth',
-      icon: TrendingUp,
-      color: 'bg-primary',
-      services: [
-        { icon: Megaphone, title: 'Gestão de Tráfego Pago', description: 'Google Ads, Meta Ads e campanhas otimizadas para conversão máxima' },
-        { icon: BarChart3, title: 'Funis de Conversão', description: 'Estratégias de vendas automatizadas e otimização de performance' },
-        { icon: TrendingUp, title: 'Growth & Branding', description: 'Posicionamento estratégico e crescimento acelerado de marca' }
-      ]
+      icon: Target,
+      title: 'Tráfego Pago',
+      subtitle: 'Meta Ads & Google Ads',
+      description: 'Campanhas otimizadas para gerar leads qualificados e vendas com ROI máximo.',
+      features: ['Estratégia de campanhas', 'Otimização de conversão', 'Relatórios detalhados'],
+      result: 'ROAS médio de 8.2x'
     },
     {
-      category: 'Focus Estúdios',
-      icon: Video,
-      color: 'bg-secondary',
-      services: [
-        { icon: Clapperboard, title: 'Produção Audiovisual', description: 'Filmagens cinematográficas e conteúdo criativo de alto impacto' },
-        { icon: Video, title: 'Campanhas Publicitárias', description: 'Roteiros, direção e produção completa de campanhas visuais' },
-        { icon: Megaphone, title: 'Storytelling Visual', description: 'Narrativas que conectam, engajam e convertem audiências' }
-      ]
+      icon: Palette,
+      title: 'Criação & Conteúdo',
+      subtitle: 'Design e Copywriting',
+      description: 'Conteúdo visual e textual que converte, engaja e fortalece sua marca.',
+      features: ['Design de anúncios', 'Copy persuasivo', 'Criativos para redes sociais'],
+      result: '+150% engajamento'
     },
     {
-      category: 'Tecnologia & Automação',
-      icon: Bot,
-      color: 'bg-gradient-to-br from-primary to-secondary',
-      services: [
-        { icon: Code, title: 'Sistemas Sob Medida', description: 'Desenvolvimento de plataformas e aplicações personalizadas' },
-        { icon: Database, title: 'CRMs Inteligentes', description: 'Automações para vendas, marketing e gestão de relacionamento' },
-        { icon: Bot, title: 'Integrações Avançadas', description: 'Conectamos seus sistemas para máxima eficiência operacional' }
-      ]
+      icon: Zap,
+      title: 'Automações',
+      subtitle: 'n8n, Make & Zapier',
+      description: 'Automatize processos, economize tempo e escale sem aumentar custos operacionais.',
+      features: ['Fluxos de nutrição', 'CRM integrado', 'Automação de vendas'],
+      result: '70% menos trabalho manual'
     }
   ];
 
   return (
-    <section id="services" className="section-padding bg-secondary text-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary mb-6">
-            <Bot size={16} />
-            <span className="text-sm font-medium">Nossos Serviços</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl focus-heading text-white mb-8">
-            Soluções <span className="gradient-text">Completas</span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Três pilares integrados que impulsionam seu negócio para resultados extraordinários
-          </p>
-        </div>
+    <section id="servicos" className="section-container bg-secondary/30">
+      <div className="text-center mb-16">
+        <h2 className="heading-xl text-foreground mb-6">
+          Nossos <span className="gradient-text">Serviços</span>
+        </h2>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Soluções completas em marketing digital para acelerar o crescimento da sua empresa
+        </p>
+      </div>
 
-        {/* Services Grid */}
-        <div className="space-y-12">
-          {services.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="group">
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className={`w-12 h-12 rounded-xl ${category.color} flex items-center justify-center shadow-lg`}>
-                  <category.icon size={24} className="text-white" />
-                </div>
-                <h3 className="text-3xl focus-subheading text-white">
-                  {category.category}
-                </h3>
-              </div>
-
-              {/* Services Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {category.services.map((service, serviceIndex) => (
-                  <Card key={serviceIndex} className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 group-hover:scale-105">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                          <service.icon size={20} className="text-primary" />
-                        </div>
-                        <CardTitle className="text-white text-lg">
-                          {service.title}
-                        </CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div key={index} className="service-card group">
+            <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+              <service.icon className="text-primary" size={32} />
             </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl focus-subheading text-white mb-6">
-            Pronto para revolucionar seu negócio?
-          </h3>
-          <Button size="lg" className="btn-hero text-lg px-8 py-4">
-            Agendar Reunião Estratégica
-            <ArrowRight className="ml-2" size={20} />
-          </Button>
-        </div>
+            <h3 className="heading-md text-foreground mb-2">{service.title}</h3>
+            <p className="text-primary font-semibold mb-4">{service.subtitle}</p>
+            <p className="text-muted-foreground mb-6">{service.description}</p>
+            <ul className="space-y-3 mb-6">
+              {service.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center text-foreground">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
+              <div className="text-primary font-semibold text-sm">Resultado:</div>
+              <div className="text-foreground font-bold">{service.result}</div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
