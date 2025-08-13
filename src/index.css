@@ -151,8 +151,13 @@ All colors MUST be HSL for consistent theming.
     @apply px-8 py-4 rounded-xl font-semibold tracking-tight text-lg;
     @apply transition-all duration-300 ease-smooth;
     @apply transform hover:scale-[1.02] active:scale-[0.98];
-    @apply shadow-lg hover:shadow-glow;
+    @apply shadow-lg;
     background: var(--gradient-primary);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-hero:hover {
+    box-shadow: var(--shadow-glow);
   }
   
   .btn-hero::before {
