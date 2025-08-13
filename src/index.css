@@ -141,7 +141,6 @@ All colors MUST be HSL for consistent theming.
     @apply font-medium tracking-tight;
   }
 }
-}
 
 @layer components {
   /* Premium Focus Marketing Components - Startup Grade */
