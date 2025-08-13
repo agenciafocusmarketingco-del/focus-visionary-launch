@@ -2,72 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Premium Focus Marketing Design System - Startup Grade
+Inspired by Linear, Stripe, Vercel - Professional & Sophisticated
+All colors MUST be HSL for consistent theming.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    /* Focus Marketing Dark Theme - Starlink inspired */
-    --background: 0 0% 4.3%; /* #0B0B0B */
-    --foreground: 0 0% 93%; /* #EDEDED */
+    /* Premium Dark Theme - Professional Grade */
+    --background: 0 0% 2%; /* #050505 - Deeper black */
+    --foreground: 0 0% 96%; /* #F5F5F5 - Premium white */
 
-    --card: 0 0% 6.7%; /* #111 */
-    --card-foreground: 0 0% 93%;
+    --card: 0 0% 4%; /* #0A0A0A - Card background */
+    --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 10.2%; /* #1A1A1A */
-    --popover-foreground: 0 0% 93%;
+    --popover: 0 0% 6%; /* #0F0F0F */
+    --popover-foreground: 0 0% 96%;
 
-    /* Focus Orange - Primary brand color */
-    --primary: 22 100% 51%; /* #FF6A00 */
-    --primary-foreground: 0 0% 4.3%;
-    --primary-glow: 22 100% 61%;
+    /* Focus Orange - Refined & Premium */
+    --primary: 24 100% 50%; /* #FF7700 - More refined orange */
+    --primary-foreground: 0 0% 2%;
+    --primary-glow: 24 100% 60%;
+    --primary-muted: 24 100% 40%;
 
-    /* Dark grays for hierarchy */
-    --secondary: 0 0% 10.2%; /* #1A1A1A */
-    --secondary-foreground: 0 0% 93%;
+    /* Sophisticated grays - Better hierarchy */
+    --secondary: 0 0% 8%; /* #141414 */
+    --secondary-foreground: 0 0% 90%;
 
-    /* Muted tones for subtle elements */
-    --muted: 0 0% 6.7%; /* #111 */
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 6%; /* #0F0F0F */
+    --muted-foreground: 0 0% 65%; /* #A6A6A6 - Better contrast */
 
-    /* Accent variations */
-    --accent: 0 0% 10.2%;
-    --accent-foreground: 0 0% 93%;
+    --accent: 0 0% 12%; /* #1F1F1F - Subtle accent */
+    --accent-foreground: 0 0% 96%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 10.2%;
-    --input: 0 0% 6.7%;
-    --ring: 22 100% 51%;
+    --border: 0 0% 12%; /* #1F1F1F - Subtle borders */
+    --input: 0 0% 8%;
+    --ring: 24 100% 50%;
 
-    /* Focus gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(22 100% 51%), hsl(22 100% 61%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4.3%) 0%, hsl(0 0% 6.7%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4.3%) 0%, hsl(0 0% 10.2%) 100%);
+    /* Premium gradients - More sophisticated */
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 50%) 0%, hsl(24 100% 60%) 100%);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(24 100% 50% / 0.15) 0%, transparent 50%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-border: linear-gradient(135deg, hsl(24 100% 50% / 0.2) 0%, transparent 100%);
     
-    /* Shadows with orange glow */
-    --shadow-glow: 0 0 40px hsl(22 100% 51% / 0.3);
-    --shadow-premium: 0 20px 60px hsl(0 0% 0% / 0.5);
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.4);
+    /* Professional shadows - Layered depth */
+    --shadow-glow: 0 0 40px hsl(24 100% 50% / 0.15);
+    --shadow-premium: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-subtle: 0 2px 8px hsl(0 0% 0% / 0.1);
+    --shadow-focus: 0 0 0 3px hsl(24 100% 50% / 0.3);
 
-    --radius: 0.75rem;
+    /* Typography scale - Professional hierarchy */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Spacing scale - Design system */
+    --space-section: 7rem; /* 112px */
+    --space-component: 3rem; /* 48px */
+    
+    --radius: 12px; /* More refined radius */
+
+    /* Glass effects for premium feel */
+    --glass-bg: hsl(0 0% 8% / 0.8);
+    --glass-border: hsl(0 0% 20% / 0.2);
+    
+    /* Animation easing - Professional curves */
+    --ease-spring: cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -82,117 +98,231 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    letter-spacing: -0.02em;
   }
   
-  /* Focus brand typography */
+  /* Professional typography hierarchy */
+  .text-display {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none;
+    font-feature-settings: 'ss01', 'cv02';
+  }
+  
+  .text-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+    font-feature-settings: 'ss01', 'cv02';
+  }
+  
+  .text-heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  
+  .text-heading-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight;
+  }
+  
+  .text-heading-md {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+  
+  .text-body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  /* Focus brand utilities */
   .focus-heading {
     @apply font-bold tracking-tight;
+    font-feature-settings: 'ss01', 'cv02';
   }
   
   .focus-subheading {
-    @apply font-semibold tracking-wide;
+    @apply font-medium tracking-tight;
   }
+}
 }
 
 @layer components {
-  /* Focus Marketing components - Starlink inspired */
+  /* Premium Focus Marketing Components - Startup Grade */
   
-  /* Hero button with orange glow */
+  /* Hero CTA - Premium with glow effect */
   .btn-hero {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold tracking-wide text-lg;
-    @apply transform transition-all duration-300 hover:scale-105;
-    box-shadow: var(--shadow-glow);
+    @apply relative bg-primary hover:bg-primary-muted text-primary-foreground;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-tight text-lg;
+    @apply transition-all duration-300 ease-smooth;
+    @apply transform hover:scale-[1.02] active:scale-[0.98];
+    @apply shadow-lg hover:shadow-glow;
+    background: var(--gradient-primary);
   }
   
-  /* Secondary button - outline style */
+  .btn-hero::before {
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
+    content: '';
+    background: linear-gradient(135deg, hsl(24 100% 60%) 0%, hsl(24 100% 50%) 100%);
+  }
+  
+  .btn-hero:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Secondary button - Glass morphism */
   .btn-secondary {
-    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-lg font-semibold tracking-wide;
-    @apply transform transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    @apply relative border border-primary/30 text-primary bg-transparent;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-tight text-lg;
+    @apply transition-all duration-300 ease-smooth;
+    @apply transform hover:scale-[1.02] active:scale-[0.98];
+    @apply backdrop-blur-sm hover:bg-primary/10 hover:border-primary/50;
+    background: var(--glass-bg);
   }
   
-  /* Premium service card */
+  /* Premium service card with glass effect */
   .service-card {
-    @apply bg-card border border-border rounded-xl p-8;
-    @apply transform transition-all duration-500 hover:scale-105 hover:border-primary/50;
+    @apply relative bg-card border border-border/50 rounded-2xl p-8;
+    @apply transition-all duration-500 ease-spring;
+    @apply hover:scale-[1.02] hover:border-primary/30;
+    background: var(--gradient-card);
     box-shadow: var(--shadow-card);
+    backdrop-filter: blur(8px);
   }
   
-  /* Portfolio card with hover effect */
+  .service-card::before {
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500;
+    content: '';
+    background: var(--gradient-border);
+  }
+  
+  .service-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Portfolio card - Premium hover effects */
   .portfolio-card {
-    @apply bg-card border border-border rounded-xl overflow-hidden;
-    @apply transform transition-all duration-300 hover:scale-105 hover:border-primary/50;
+    @apply relative bg-card border border-border/50 rounded-2xl overflow-hidden;
+    @apply transition-all duration-300 ease-smooth;
+    @apply hover:scale-[1.02] hover:border-primary/30;
+    background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
   
-  /* Gradient text effect */
+  /* Gradient text with better fallback */
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: hsl(var(--primary)); /* Fallback for non-webkit browsers */
   }
   
-  /* Section with proper spacing */
+  /* Section container with proper spacing */
   .section-container {
-    @apply py-20 px-4 lg:px-8 max-w-7xl mx-auto;
+    @apply py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto;
   }
   
-  /* Typography scales */
-  .heading-hero {
-    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+  /* Glass navigation effect */
+  .glass-nav {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
   }
   
-  .heading-xl {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
-  }
-  
-  .heading-lg {
-    @apply text-2xl md:text-3xl font-bold tracking-tight;
-  }
-  
-  .heading-md {
-    @apply text-xl md:text-2xl font-semibold tracking-wide;
-  }
-  
-  /* Glass effect */
+  /* Premium glass effect */
   .glass-effect {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  /* Floating elements */
+  .floating-card {
+    @apply transform transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-premium);
   }
 }
 
 @layer utilities {
-  /* Custom animations */
+  /* Professional animations - Startup grade */
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
+    animation: slideUp 0.8s var(--ease-spring);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s var(--ease-smooth);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s var(--ease-bounce);
+  }
+  
+  /* Interaction states */
+  .interactive {
+    @apply transition-all duration-300 ease-smooth cursor-pointer;
+  }
+  
+  .interactive:hover {
+    @apply scale-[1.02] brightness-110;
+  }
+  
+  .interactive:active {
+    @apply scale-[0.98];
   }
 }
 
+/* Professional keyframes */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 20px hsl(22 100% 55% / 0.2); }
-  100% { box-shadow: 0 0 40px hsl(22 100% 55% / 0.4); }
+  0% { 
+    box-shadow: 0 0 20px hsl(24 100% 50% / 0.2);
+    filter: brightness(1);
+  }
+  100% { 
+    box-shadow: 0 0 40px hsl(24 100% 50% / 0.4);
+    filter: brightness(1.1);
+  }
 }
 
 @keyframes slideUp {
   0% { 
     opacity: 0; 
-    transform: translateY(30px); 
+    transform: translateY(60px); 
   }
   100% { 
     opacity: 1; 
     transform: translateY(0); 
+  }
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
   }
 }

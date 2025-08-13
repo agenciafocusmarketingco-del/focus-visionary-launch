@@ -1,137 +1,155 @@
 /**
- * Navigation - Professional header for Focus Marketing
- * Starlink-inspired design with dark theme and orange accents
+ * Navigation - Premium glass navigation with sticky behavior
+ * Professional startup-grade design with micro-interactions
  */
 
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-
-  const navItems = [
-    { label: 'Serviços', href: '/#servicos' },
-    { label: 'Portfólio', href: '/portfolio' },
-    { label: 'Equipe', href: '/equipe' },
-    { label: 'Contato', href: '/#contato' }
-  ];
 
   const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
-    setIsMenuOpen(false);
-    
-    if (href.startsWith('/#')) {
-      const element = document.querySelector(href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
     }
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
-      }`}
-    >
-      <nav className="container mx-auto px-4 lg:px-8 h-20">
-        <div className="flex items-center justify-between h-full">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-foreground">Focus</span>
-              <span className="gradient-text">Marketing</span>
-            </div>
-          </Link>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'glass-nav shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo with premium styling */}
+          <div className="flex-shrink-0">
+            <span className="text-2xl font-black tracking-tight">
+              Focus<span className="gradient-text">Marketing</span>
+            </span>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => {
-                  if (item.href.startsWith('/#')) {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }
-                }}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
-            
+          <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => scrollToSection('#services')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Serviços
+            </button>
+            <button
+              onClick={() => scrollToSection('#portfolio')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Portfólio
+            </button>
+            <button
+              onClick={() => scrollToSection('#process')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Processo
+            </button>
+            <button
+              onClick={() => scrollToSection('#testimonials')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Depoimentos
+            </button>
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Contato
+            </button>
+          </div>
+
+          {/* Premium WhatsApp CTA */}
+          <div className="hidden md:flex items-center">
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero inline-flex items-center space-x-2"
+              className="bg-primary hover:bg-primary-muted text-primary-foreground px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center space-x-2 group"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
               <span>WhatsApp</span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-foreground hover:text-primary transition-colors duration-200"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-      </nav>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden glass-effect border-t border-border">
-          <div className="container mx-auto px-4 py-6">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (item.href.startsWith('/#')) {
-                      e.preventDefault();
-                      handleNavClick(item.href);
-                    } else {
-                      setIsMenuOpen(false);
-                    }
-                  }}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                >
-                  {item.label}
-                </a>
-              ))}
-              
+        {/* Mobile Navigation */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-6 space-y-4 glass-effect rounded-2xl mt-4 p-6">
+            <button
+              onClick={() => scrollToSection('#services')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Serviços
+            </button>
+            <button
+              onClick={() => scrollToSection('#portfolio')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Portfólio
+            </button>
+            <button
+              onClick={() => scrollToSection('#process')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Processo
+            </button>
+            <button
+              onClick={() => scrollToSection('#testimonials')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Depoimentos
+            </button>
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Contato
+            </button>
+            <div className="pt-4 border-t border-border/50">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-hero inline-flex items-center justify-center space-x-2 mt-4"
+                className="btn-hero w-full justify-center inline-flex items-center space-x-2"
               >
                 <MessageCircle size={18} />
-                <span>WhatsApp</span>
+                <span>Falar no WhatsApp</span>
               </a>
             </div>
           </div>
         </div>
-      )}
-    </header>
+      </div>
+    </nav>
   );
 };
 
