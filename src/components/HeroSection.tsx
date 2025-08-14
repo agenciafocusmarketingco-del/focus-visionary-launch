@@ -1,15 +1,16 @@
 /**
- * HeroSection - Full-screen hero with strong typography and CTAs
- * Starlink-inspired design with dark background and orange accents
+ * HeroSection - Modern, creative and technological hero section for Focus Agency
+ * Vibrant orange accents, black contrast, white clarity
  */
 
-import { ChevronDown, MessageCircle, Play } from 'lucide-react';
+import { ChevronDown, Zap, Network, Cpu, Play } from 'lucide-react';
+import heroBg from '@/assets/hero-tech-bg.jpg';
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
+  const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20para%20o%20futuro!";
 
-  const scrollToPortfolio = () => {
-    const element = document.querySelector('#portfolio');
+  const scrollToAbout = () => {
+    const element = document.querySelector('#about');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -17,106 +18,139 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Premium background with sophisticated effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/50">
-        {/* Animated grid pattern */}
+      {/* Futuristic background with dynamic elements */}
+      <div className="absolute inset-0">
+        {/* Hero background image */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255, 119, 0, 0.4) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 119, 0, 0.4) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${heroBg})`,
+            filter: 'brightness(0.4) contrast(1.2)'
           }}
         />
         
-        {/* Hero gradient overlay */}
+        {/* Tech overlay pattern */}
         <div 
-          className="absolute inset-0 opacity-60"
-          style={{ background: 'var(--gradient-hero)' }}
+          className="absolute inset-0 opacity-[0.1]"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 80%, rgba(255, 119, 0, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 119, 0, 0.2) 0%, transparent 50%),
+              linear-gradient(45deg, transparent 49%, rgba(255, 119, 0, 0.1) 50%, transparent 51%)
+            `,
+            backgroundSize: '100% 100%, 100% 100%, 20px 20px'
+          }}
         />
         
-        {/* Floating premium orbs */}
-        <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl animate-float delay-1000" />
-        <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-float delay-2000" />
+        {/* Dynamic gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-orange-900/20" />
+        
+        {/* Animated geometric elements */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-orange-500/20 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 border-2 border-orange-400/30 transform rotate-45 animate-pulse" />
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-white/10 animate-bounce" style={{ animationDuration: '3s' }} />
+      </div>
+
+      {/* Floating tech icons */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Zap className="absolute top-1/4 left-1/6 text-orange-500/40 animate-pulse" size={24} />
+        <Network className="absolute top-1/3 right-1/5 text-white/30 animate-float" size={32} />
+        <Cpu className="absolute bottom-1/3 left-1/3 text-orange-400/50 animate-bounce" size={28} />
       </div>
 
       <div className="section-container relative z-10">
-        <div className="text-center max-w-6xl mx-auto">
-          {/* Premium badge with glass effect */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full glass-effect mb-12 animate-fade-in">
-            <span className="text-sm font-medium text-primary mr-3">🚀</span>
-            <span className="text-sm font-medium text-foreground/90">Agência #1 em Tráfego Pago + Automações</span>
+        <div className="text-center max-w-7xl mx-auto">
+          {/* Innovation badge */}
+          <div className="inline-flex items-center px-8 py-4 rounded-full bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm mb-12 animate-fade-in">
+            <Zap className="text-orange-500 mr-3" size={20} />
+            <span className="text-sm font-semibold text-white tracking-wide">FOCUS ESTÚDIOS • INOVAÇÃO & TECNOLOGIA</span>
           </div>
 
-          {/* Hero headline with premium typography */}
-          <h1 className="text-hero text-foreground mb-8 animate-slide-up">
-            Acelere seu crescimento com{' '}
-            <span className="gradient-text">tráfego pago</span>{' '}
-            e automações inteligentes
+          {/* Main headline - modern and impactful */}
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-none tracking-tight animate-slide-up">
+            Impulsionando{' '}
+            <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+              Negócios
+            </span>
+            <br />
+            para o{' '}
+            <span className="bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent">
+              Futuro,
+            </span>{' '}
+            Hoje.
           </h1>
 
-          {/* Refined subtitle */}
-          <div className="space-y-4 mb-16 animate-fade-in delay-200">
-            <p className="text-body-lg text-muted-foreground max-w-4xl mx-auto">
-              Estratégia, dados e execução para colocar sua marca no topo.
-            </p>
-            <p className="text-lg font-semibold text-primary">
-              Resultados reais, escaláveis e mensuráveis.
+          {/* Subtitle with tech focus */}
+          <div className="space-y-6 mb-16 animate-fade-in delay-200">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto font-light leading-relaxed">
+              Inovação, inteligência artificial e criatividade para transformar 
+              <span className="text-orange-400 font-medium"> ideias em resultados reais</span>.
             </p>
           </div>
 
-          {/* Premium CTAs */}
+          {/* Premium CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-scale-in delay-300">
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero inline-flex items-center space-x-3 group"
+              className="group relative px-12 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-xl shadow-2xl shadow-orange-500/25 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40 overflow-hidden"
             >
-              <MessageCircle size={20} className="transition-transform group-hover:scale-110" />
-              <span>Falar no WhatsApp</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative flex items-center space-x-3">
+                <Zap size={20} className="transition-transform group-hover:scale-110" />
+                <span>Começar Agora</span>
+              </span>
             </a>
             
             <button
-              onClick={scrollToPortfolio}
-              className="btn-secondary inline-flex items-center space-x-3 group"
+              onClick={scrollToAbout}
+              className="group px-12 py-5 bg-transparent border-2 border-white text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 shadow-xl"
             >
-              <Play size={18} className="transition-transform group-hover:scale-110" />
-              <span>Ver Portfólio</span>
+              <span className="flex items-center space-x-3">
+                <Play size={18} className="transition-transform group-hover:scale-110" />
+                <span>Conheça a Focus</span>
+              </span>
             </button>
           </div>
 
-          {/* Enhanced stats with better spacing */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 animate-fade-in delay-500">
-            <div className="text-center group">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-3 transition-transform group-hover:scale-105">
-                +500
+          {/* Tech stats with animated counters */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 animate-fade-in delay-500">
+            <div className="text-center group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent rounded-2xl"></div>
+              <div className="relative p-8">
+                <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
+                  500+
+                </div>
+                <div className="text-gray-400 font-medium tracking-wider text-lg">Projetos Entregues</div>
               </div>
-              <div className="text-muted-foreground font-medium tracking-wide">Leads Gerados</div>
             </div>
-            <div className="text-center group">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-3 transition-transform group-hover:scale-105">
-                8.2x
+            <div className="text-center group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent rounded-2xl"></div>
+              <div className="relative p-8">
+                <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
+                  AI+
+                </div>
+                <div className="text-gray-400 font-medium tracking-wider text-lg">Inteligência Artificial</div>
               </div>
-              <div className="text-muted-foreground font-medium tracking-wide">ROAS Médio</div>
             </div>
-            <div className="text-center group">
-              <div className="text-5xl md:text-6xl font-black text-primary mb-3 transition-transform group-hover:scale-105">
-                47+
+            <div className="text-center group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent rounded-2xl"></div>
+              <div className="relative p-8">
+                <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
+                  24/7
+                </div>
+                <div className="text-gray-400 font-medium tracking-wider text-lg">Suporte Dedicado</div>
               </div>
-              <div className="text-muted-foreground font-medium tracking-wide">Empresas Atendidas</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Refined scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="p-2 rounded-full glass-effect">
-          <ChevronDown className="text-primary" size={24} />
+      {/* Enhanced scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="p-4 rounded-full bg-orange-500/10 border border-orange-500/30 backdrop-blur-sm">
+          <ChevronDown className="text-orange-500" size={28} />
         </div>
       </div>
     </section>
