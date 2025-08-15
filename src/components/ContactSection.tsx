@@ -16,7 +16,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: 'WhatsApp',
-      content: '+55 11 99999-9999',
+      content: '+55 85 9659-8809',
       description: 'Atendimento 24/7'
     },
     {
@@ -160,9 +160,11 @@ const ContactSection = () => {
                 <p className="text-muted-foreground mb-6">
                   Atendimento direto no WhatsApp para projetos urgentes
                 </p>
-                <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
-                  WhatsApp Direto
-                  <Phone className="ml-2" size={18} />
+                <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white" asChild>
+                  <a href="https://wa.me/5585996598809?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20urgente!" target="_blank" rel="noopener noreferrer">
+                    WhatsApp Direto
+                    <Phone className="ml-2" size={18} />
+                  </a>
                 </Button>
               </CardContent>
             </Card>

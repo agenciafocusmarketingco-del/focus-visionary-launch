@@ -96,8 +96,10 @@ const Footer = () => {
 
             {/* Quick Contact */}
             <div className="mt-6">
-              <Button size="sm" className="btn-hero">
-                Falar no WhatsApp
+              <Button size="sm" className="btn-hero" asChild>
+                <a href="https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20meu%20projeto!" target="_blank" rel="noopener noreferrer">
+                  Falar no WhatsApp
+                </a>
               </Button>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { Camera, Play, Film, Palette, Video, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const FocusStudiosSection = () => {
-  const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20or%C3%A7ar%20uma%20produ%C3%A7%C3%A3o%20audiovisual%20com%20a%20Focus%20Est%C3%BAdios!";
+  const whatsappLink = "https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20or%C3%A7ar%20uma%20produ%C3%A7%C3%A3o%20audiovisual%20com%20a%20Focus%20Est%C3%BAdios!";
 
   const highlights = [
     {
