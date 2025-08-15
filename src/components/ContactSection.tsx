@@ -120,7 +120,7 @@ const ContactSection = () => {
                 </div>
 
                 <Button size="lg" className="btn-hero w-full text-lg">
-                  Agendar Reunião Gratuita
+                  Quero Impulsionar Meu Negócio
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
 

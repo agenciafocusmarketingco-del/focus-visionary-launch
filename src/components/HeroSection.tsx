@@ -83,8 +83,8 @@ const HeroSection = () => {
           {/* Subtitle with tech focus */}
           <div className="space-y-6 mb-16 animate-fade-in delay-200">
             <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto font-light leading-relaxed">
-              Inovação, inteligência artificial e criatividade para transformar 
-              <span className="text-orange-400 font-medium"> ideias em resultados reais</span>.
+              Unimos inteligência artificial, automações, marketing e criatividade para transformar 
+              <span className="text-orange-400 font-medium"> ideias em resultados escaláveis</span>.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center space-x-3">
                 <Zap size={20} className="transition-transform group-hover:scale-110" />
-                <span>Começar Agora</span>
+                <span>Solicitar Proposta</span>
               </span>
             </a>
             

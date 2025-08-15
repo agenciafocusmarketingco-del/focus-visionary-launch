@@ -48,22 +48,28 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
+              onClick={() => scrollToSection('#about')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Quem Somos
+            </button>
+            <button
               onClick={() => scrollToSection('#services')}
               className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
             >
               Serviços
             </button>
             <button
+              onClick={() => scrollToSection('#focus-studios')}
+              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Focus Estúdios
+            </button>
+            <button
               onClick={() => scrollToSection('#portfolio')}
               className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
             >
-              Portfólio
-            </button>
-            <button
-              onClick={() => scrollToSection('#process')}
-              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
-            >
-              Processo
+              Cases
             </button>
             <button
               onClick={() => scrollToSection('#testimonials')}
@@ -79,18 +85,19 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Premium WhatsApp CTA */}
-          <div className="hidden md:flex items-center">
+          {/* Premium CTA - Começar Agora */}
+          <div className="hidden md:flex items-center space-x-4">
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary-muted text-primary-foreground px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center space-x-2 group"
+              className="btn-hero inline-flex items-center space-x-2 group"
             >
               <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
-              <span>WhatsApp</span>
+              <span>Começar Agora</span>
             </a>
           </div>
+
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -109,22 +116,28 @@ const Navigation = () => {
         }`}>
           <div className="py-6 space-y-4 glass-effect rounded-2xl mt-4 p-6">
             <button
+              onClick={() => scrollToSection('#about')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Quem Somos
+            </button>
+            <button
               onClick={() => scrollToSection('#services')}
               className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
             >
               Serviços
             </button>
             <button
+              onClick={() => scrollToSection('#focus-studios')}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+            >
+              Focus Estúdios
+            </button>
+            <button
               onClick={() => scrollToSection('#portfolio')}
               className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
             >
-              Portfólio
-            </button>
-            <button
-              onClick={() => scrollToSection('#process')}
-              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
-            >
-              Processo
+              Cases
             </button>
             <button
               onClick={() => scrollToSection('#testimonials')}
@@ -146,7 +159,7 @@ const Navigation = () => {
                 className="btn-hero w-full justify-center inline-flex items-center space-x-2"
               >
                 <MessageCircle size={18} />
-                <span>Falar no WhatsApp</span>
+                <span>Começar Agora</span>
               </a>
             </div>
           </div>
