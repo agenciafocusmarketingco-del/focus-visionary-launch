@@ -5,50 +5,46 @@
 
 import { ChevronDown, Zap, Network, Cpu, Play } from 'lucide-react';
 import heroBg from '@/assets/hero-tech-bg.jpg';
-
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20para%20o%20futuro!";
-
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Futuristic background with dynamic elements */}
       <div className="absolute inset-0">
         {/* Hero background image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `url(${heroBg})`,
-            filter: 'brightness(0.4) contrast(1.2)'
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${heroBg})`,
+        filter: 'brightness(0.4) contrast(1.2)'
+      }} />
         
         {/* Tech overlay pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.1]"
-          style={{
-            backgroundImage: `
+        <div className="absolute inset-0 opacity-[0.1]" style={{
+        backgroundImage: `
               radial-gradient(circle at 20% 80%, rgba(255, 119, 0, 0.3) 0%, transparent 50%),
               radial-gradient(circle at 80% 20%, rgba(255, 119, 0, 0.2) 0%, transparent 50%),
               linear-gradient(45deg, transparent 49%, rgba(255, 119, 0, 0.1) 50%, transparent 51%)
             `,
-            backgroundSize: '100% 100%, 100% 100%, 20px 20px'
-          }}
-        />
+        backgroundSize: '100% 100%, 100% 100%, 20px 20px'
+      }} />
         
         {/* Dynamic gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-orange-900/20" />
         
         {/* Animated geometric elements */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-orange-500/20 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-orange-500/20 rounded-full animate-spin" style={{
+        animationDuration: '20s'
+      }} />
         <div className="absolute bottom-1/4 right-1/4 w-32 h-32 border-2 border-orange-400/30 transform rotate-45 animate-pulse" />
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-white/10 animate-bounce" style={{ animationDuration: '3s' }} />
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-white/10 animate-bounce" style={{
+        animationDuration: '3s'
+      }} />
       </div>
 
       {/* Floating tech icons */}
@@ -61,10 +57,7 @@ const HeroSection = () => {
       <div className="section-container relative z-10">
         <div className="text-center max-w-7xl mx-auto">
           {/* Innovation badge */}
-          <div className="inline-flex items-center px-8 py-4 rounded-full bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm mb-12 animate-fade-in">
-            <Zap className="text-orange-500 mr-3" size={20} />
-            <span className="text-sm font-semibold text-white tracking-wide">FOCUS ESTÚDIOS • INOVAÇÃO & TECNOLOGIA</span>
-          </div>
+          
 
           {/* Main headline - modern and impactful */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-none tracking-tight animate-slide-up">
@@ -90,12 +83,7 @@ const HeroSection = () => {
 
           {/* Premium CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-scale-in delay-300">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-12 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-xl shadow-2xl shadow-orange-500/25 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40 overflow-hidden"
-            >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group relative px-12 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-xl shadow-2xl shadow-orange-500/25 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center space-x-3">
                 <Zap size={20} className="transition-transform group-hover:scale-110" />
@@ -103,10 +91,7 @@ const HeroSection = () => {
               </span>
             </a>
             
-            <button
-              onClick={scrollToAbout}
-              className="group px-12 py-5 bg-transparent border-2 border-white text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 shadow-xl"
-            >
+            <button onClick={scrollToAbout} className="group px-12 py-5 bg-transparent border-2 border-white text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 shadow-xl">
               <span className="flex items-center space-x-3">
                 <Play size={18} className="transition-transform group-hover:scale-110" />
                 <span>Conheça a Focus</span>
@@ -153,8 +138,6 @@ const HeroSection = () => {
           <ChevronDown className="text-orange-500" size={28} />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
