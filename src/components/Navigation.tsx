@@ -4,12 +4,13 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, User } from 'lucide-react';
 import focusLogo from '/lovable-uploads/99c17306-6018-4eac-af3b-8ead6992dd8f.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
+  const appLink = "#"; // TODO: Definir endereço do app da Focus
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -54,8 +55,17 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Premium CTA - Começar Agora */}
+          {/* Profile Icon & Premium CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href={appLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
+              title="Acessar App da Focus"
+            >
+              <User size={20} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
+            </a>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero inline-flex items-center space-x-2 group">
               <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
               <span>Começar Agora</span>
