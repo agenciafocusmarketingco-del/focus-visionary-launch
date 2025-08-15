@@ -10,7 +10,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const whatsappLink = "https://wa.me/5585992416184?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
-  const appLink = "#"; // TODO: Definir endereço do app da Focus
+  const appLink = "https://preview--focus-nexus-dash.lovable.app/auth";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
