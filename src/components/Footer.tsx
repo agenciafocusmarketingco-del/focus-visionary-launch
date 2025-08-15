@@ -26,8 +26,15 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-primary p-2">
-                <Instagram size={20} />
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-gray-400 hover:text-primary p-2"
+                asChild
+              >
+                <a href="https://www.instagram.com/focusmarketing.co/" target="_blank" rel="noopener noreferrer">
+                  <Instagram size={20} />
+                </a>
               </Button>
               <Button variant="ghost" size="sm" className="text-gray-400 hover:text-primary p-2">
                 <Linkedin size={20} />
