@@ -1,40 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Instagram, 
-  Linkedin, 
-  Youtube,
-  ArrowUp
-} from 'lucide-react';
-
+import { Mail, Phone, MapPin, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 const Footer = () => {
-  const services = [
-    'Marketing Digital',
-    'Produção Audiovisual',
-    'Automação & IA',
-    'CRM Inteligente',
-    'Growth Hacking',
-    'Branding'
-  ];
-
-  const company = [
-    'Sobre Nós',
-    'Portfolio',
-    'Cases de Sucesso',
-    'Blog',
-    'Carreiras',
-    'Contato'
-  ];
-
+  const services = ['Marketing Digital', 'Produção Audiovisual', 'Automação & IA', 'CRM Inteligente', 'Growth Hacking', 'Branding'];
+  const company = ['Sobre Nós', 'Portfolio', 'Cases de Sucesso', 'Blog', 'Carreiras', 'Contato'];
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <footer className="bg-secondary text-white">
+  return <footer className="bg-secondary text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -66,16 +42,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-gray-400 hover:text-primary transition-colors duration-200"
-                  >
+              {services.map((service, index) => <li key={index}>
+                  <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
                     {service}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -83,16 +54,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
-              {company.map((item, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-gray-400 hover:text-primary transition-colors duration-200"
-                  >
+              {company.map((item, index) => <li key={index}>
+                  <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
                     {item}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -102,11 +68,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-primary" />
-                <span className="text-gray-400">contato@focus.com.br</span>
+                <span className="text-gray-400">Agenciafocusmarketing.com.br</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
-                <span className="text-gray-400">+55 11 99999-9999</span>
+                <span className="text-gray-400">+55 85 9659-8809</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-primary" />
@@ -134,11 +100,7 @@ const Footer = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Seu melhor e-mail"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary"
-              />
+              <input type="email" placeholder="Seu melhor e-mail" className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary" />
               <Button className="btn-hero">
                 Inscrever
               </Button>
@@ -165,19 +127,12 @@ const Footer = () => {
             </a>
             
             {/* Back to Top */}
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              onClick={scrollToTop}
-              className="text-gray-400 hover:text-primary p-2"
-            >
+            <Button variant="ghost" size="sm" onClick={scrollToTop} className="text-gray-400 hover:text-primary p-2">
               <ArrowUp size={20} />
             </Button>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
