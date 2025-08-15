@@ -4,11 +4,14 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle, User } from 'lucide-react';
+import { Menu, X, MessageCircle, User, LogIn } from 'lucide-react';
+import { useAuth } from '@/components/auth/AuthProvider';
+import { Link } from 'react-router-dom';
 import focusLogo from '/lovable-uploads/99c17306-6018-4eac-af3b-8ead6992dd8f.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user } = useAuth();
   const whatsappLink = "https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
   const appLink = "https://preview--focus-nexus-dash.lovable.app/auth";
   useEffect(() => {
@@ -57,15 +60,23 @@ const Navigation = () => {
 
           {/* Profile Icon & Premium CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <a 
-              href={appLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
-              title="Acessar App da Focus"
-            >
-              <User size={20} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
-            </a>
+            {user ? (
+              <Link 
+                to="/profile"
+                className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
+                title="Meu Perfil"
+              >
+                <User size={20} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
+              </Link>
+            ) : (
+              <Link 
+                to="/auth"
+                className="text-foreground/70 hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
+              >
+                <LogIn size={18} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
+                <span>Entrar</span>
+              </Link>
+            )}
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero inline-flex items-center space-x-2 group">
               <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
               <span>Começar Agora</span>
@@ -102,7 +113,18 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('#contact')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">
               Contato
             </button>
-            <div className="pt-4 border-t border-border/50">
+            <div className="pt-4 border-t border-border/50 space-y-3">
+              {user ? (
+                <Link to="/profile" className="w-full btn-outline justify-center inline-flex items-center space-x-2">
+                  <User size={18} />
+                  <span>Meu Perfil</span>
+                </Link>
+              ) : (
+                <Link to="/auth" className="w-full btn-outline justify-center inline-flex items-center space-x-2">
+                  <LogIn size={18} />
+                  <span>Entrar</span>
+                </Link>
+              )}
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero w-full justify-center inline-flex items-center space-x-2">
                 <MessageCircle size={18} />
                 <span>Começar Agora</span>
