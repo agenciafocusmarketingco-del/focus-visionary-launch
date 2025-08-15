@@ -36,8 +36,15 @@ const Footer = () => {
                   <Instagram size={20} />
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-primary p-2">
-                <Linkedin size={20} />
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-gray-400 hover:text-primary p-2"
+                asChild
+              >
+                <a href="https://www.linkedin.com/company/focus-marketing-co/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin size={20} />
+                </a>
               </Button>
               <Button variant="ghost" size="sm" className="text-gray-400 hover:text-primary p-2">
                 <Youtube size={20} />
