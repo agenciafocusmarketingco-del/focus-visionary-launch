@@ -47,7 +47,7 @@ const ClientsSection = () => {
             Clientes que <span className="gradient-text">Confiam</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
             Histórias reais de transformação e crescimento exponencial
           </p>
         </div>
@@ -63,7 +63,7 @@ const ClientsSection = () => {
                 </div>
 
                 {/* Content */}
-                <p className="text-gray-300 mb-6 leading-relaxed italic">
+                <p className="text-foreground mb-6 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
 
@@ -84,7 +84,7 @@ const ClientsSection = () => {
                 {/* Author */}
                 <div className="border-t border-white/20 pt-4">
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.position}</div>
+                  <div className="text-sm text-foreground/80">{testimonial.position}</div>
                   <div className="text-sm text-primary">{testimonial.company}</div>
                 </div>
               </CardContent>
@@ -104,7 +104,7 @@ const ClientsSection = () => {
                 <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <span className="text-white font-bold text-sm">{logo[0]}</span>
                 </div>
-                <span className="text-gray-400 text-sm">{logo}</span>
+                <span className="text-foreground/80 text-sm">{logo}</span>
               </div>
             ))}
           </div>
@@ -115,19 +115,19 @@ const ClientsSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-2xl font-bold text-primary mb-2">98%</div>
-              <div className="text-gray-300 text-sm">Taxa de Satisfação</div>
+              <div className="text-foreground text-sm">Taxa de Satisfação</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary mb-2">5.0</div>
-              <div className="text-gray-300 text-sm">Avaliação Média</div>
+              <div className="text-foreground text-sm">Avaliação Média</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary mb-2">24h</div>
-              <div className="text-gray-300 text-sm">Tempo de Resposta</div>
+              <div className="text-foreground text-sm">Tempo de Resposta</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary mb-2">3 Anos</div>
-              <div className="text-gray-300 text-sm">Relacionamento Médio</div>
+              <div className="text-foreground text-sm">Relacionamento Médio</div>
             </div>
           </div>
         </div>

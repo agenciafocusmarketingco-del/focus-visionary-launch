@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <span className="text-3xl font-bold gradient-text">Focus</span>
-              <p className="text-gray-400 mt-4 leading-relaxed">
+              <p className="text-foreground/80 mt-4 leading-relaxed">
                 Impulsionando negócios para o futuro com inovação, 
                 tecnologia e criatividade.
               </p>
@@ -29,7 +29,7 @@ const Footer = () => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="text-gray-400 hover:text-primary p-2"
+                className="text-foreground hover:text-primary p-2"
                 asChild
               >
                 <a href="https://www.instagram.com/focusmarketing.co/" target="_blank" rel="noopener noreferrer">
@@ -39,14 +39,14 @@ const Footer = () => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="text-gray-400 hover:text-primary p-2"
+                className="text-foreground hover:text-primary p-2"
                 asChild
               >
                 <a href="https://www.linkedin.com/company/focus-marketing-co/" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} />
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-primary p-2">
+              <Button variant="ghost" size="sm" className="text-foreground hover:text-primary p-2">
                 <Youtube size={20} />
               </Button>
             </div>
@@ -57,7 +57,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
               {services.map((service, index) => <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                  <a href="#" className="text-foreground hover:text-primary transition-colors duration-200">
                     {service}
                   </a>
                 </li>)}
@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {company.map((item, index) => <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                  <a href="#" className="text-foreground hover:text-primary transition-colors duration-200">
                     {item}
                   </a>
                 </li>)}
@@ -82,15 +82,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-primary" />
-                <span className="text-gray-400">Agenciafocusmarketing.com.br</span>
+                <span className="text-foreground">Agenciafocusmarketing.com.br</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
-                <span className="text-gray-400">+55 85 9659-8809</span>
+                <span className="text-foreground">+55 85 9659-8809</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-primary" />
-                <span className="text-gray-400">São Paulo, SP</span>
+                <span className="text-foreground">São Paulo, SP</span>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-white mb-4">
               Receba insights sobre IA e Marketing
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-foreground/80 mb-6">
               Estratégias exclusivas, cases reais e tendências do mercado direto no seu e-mail
             </p>
             
@@ -130,20 +130,20 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gray-400 text-sm">
+          <div className="text-foreground/80 text-sm">
             © 2024 Focus Agency. Todos os direitos reservados.
           </div>
           
           <div className="flex items-center gap-6">
-            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+            <a href="#" className="text-foreground hover:text-primary text-sm transition-colors">
               Privacidade
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+            <a href="#" className="text-foreground hover:text-primary text-sm transition-colors">
               Termos
             </a>
             
             {/* Back to Top */}
-            <Button variant="ghost" size="sm" onClick={scrollToTop} className="text-gray-400 hover:text-primary p-2">
+            <Button variant="ghost" size="sm" onClick={scrollToTop} className="text-foreground hover:text-primary p-2">
               <ArrowUp size={20} />
             </Button>
           </div>

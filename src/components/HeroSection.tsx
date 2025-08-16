@@ -75,7 +75,7 @@ const HeroSection = () => {
 
           {/* Subtitle with tech focus */}
           <div className="space-y-6 mb-16 animate-fade-in delay-200">
-            <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground max-w-5xl mx-auto font-light leading-relaxed">
               Unimos inteligência artificial, automações, marketing e criatividade para transformar 
               <span className="text-orange-400 font-medium"> ideias em resultados escaláveis</span>.
             </p>
@@ -107,7 +107,7 @@ const HeroSection = () => {
                 <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
                   500+
                 </div>
-                <div className="text-gray-400 font-medium tracking-wider text-lg">Projetos Entregues</div>
+                <div className="text-foreground font-medium tracking-wider text-lg">Projetos Entregues</div>
               </div>
             </div>
             <div className="text-center group relative">
@@ -116,7 +116,7 @@ const HeroSection = () => {
                 <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
                   AI+
                 </div>
-                <div className="text-gray-400 font-medium tracking-wider text-lg">Inteligência Artificial</div>
+                <div className="text-foreground font-medium tracking-wider text-lg">Inteligência Artificial</div>
               </div>
             </div>
             <div className="text-center group relative">
@@ -125,7 +125,7 @@ const HeroSection = () => {
                 <div className="text-6xl md:text-7xl font-black text-orange-500 mb-4 transition-transform group-hover:scale-110 duration-300">
                   24/7
                 </div>
-                <div className="text-gray-400 font-medium tracking-wider text-lg">Suporte Dedicado</div>
+                <div className="text-foreground font-medium tracking-wider text-lg">Suporte Dedicado</div>
               </div>
             </div>
           </div>

@@ -60,20 +60,31 @@ const Navigation = () => {
 
           {/* Profile Icon & Premium CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            {/* Ícone de perfil/app sempre visível */}
+            <a 
+              href={appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
+              title="Acessar App Focus"
+            >
+              <User size={20} className="text-foreground group-hover:text-primary transition-colors duration-300" />
+            </a>
+            
             {user ? (
               <Link 
                 to="/profile"
-                className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
-                title="Meu Perfil"
+                className="text-foreground hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
               >
-                <User size={20} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
+                <User size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
+                <span>Perfil</span>
               </Link>
             ) : (
               <Link 
                 to="/auth"
-                className="text-foreground/70 hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
+                className="text-foreground hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
               >
-                <LogIn size={18} className="text-foreground/70 group-hover:text-primary transition-colors duration-300" />
+                <LogIn size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
                 <span>Entrar</span>
               </Link>
             )}
