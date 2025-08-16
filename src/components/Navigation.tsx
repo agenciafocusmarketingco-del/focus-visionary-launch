@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle, User, LogIn } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { Link } from 'react-router-dom';
-import focusLogo from '/lovable-uploads/af57eb56-bc0e-438c-8760-4bdfc781628e.png';
+import focusLogo from '/lovable-uploads/67da2118-164b-4814-8b86-4e16e97f2ad7.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
