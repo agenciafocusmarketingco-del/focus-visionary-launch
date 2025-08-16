@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle, User, LogIn } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { Link } from 'react-router-dom';
-import focusLogo from '/lovable-uploads/99c17306-6018-4eac-af3b-8ead6992dd8f.png';
+import focusLogo from '/lovable-uploads/af57eb56-bc0e-438c-8760-4bdfc781628e.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,23 +71,6 @@ const Navigation = () => {
               <User size={20} className="text-foreground group-hover:text-primary transition-colors duration-300" />
             </a>
             
-            {user ? (
-              <Link 
-                to="/profile"
-                className="text-foreground hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
-              >
-                <User size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
-                <span>Perfil</span>
-              </Link>
-            ) : (
-              <Link 
-                to="/auth"
-                className="text-foreground hover:text-primary transition-colors duration-300 group flex items-center gap-2 px-4 py-2 rounded-lg border border-border/30 hover:border-primary/50"
-              >
-                <LogIn size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
-                <span>Entrar</span>
-              </Link>
-            )}
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero inline-flex items-center space-x-2 group">
               <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
               <span>Começar Agora</span>
@@ -125,17 +108,15 @@ const Navigation = () => {
               Contato
             </button>
             <div className="pt-4 border-t border-border/50 space-y-3">
-              {user ? (
-                <Link to="/profile" className="w-full btn-outline justify-center inline-flex items-center space-x-2">
-                  <User size={18} />
-                  <span>Meu Perfil</span>
-                </Link>
-              ) : (
-                <Link to="/auth" className="w-full btn-outline justify-center inline-flex items-center space-x-2">
-                  <LogIn size={18} />
-                  <span>Entrar</span>
-                </Link>
-              )}
+              <a 
+                href={appLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full btn-outline justify-center inline-flex items-center space-x-2"
+              >
+                <User size={18} />
+                <span>Acessar App</span>
+              </a>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero w-full justify-center inline-flex items-center space-x-2">
                 <MessageCircle size={18} />
                 <span>Começar Agora</span>
