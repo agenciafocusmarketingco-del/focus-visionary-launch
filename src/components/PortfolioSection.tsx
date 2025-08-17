@@ -61,7 +61,11 @@ const PortfolioSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="portfolio-card group">
+          <div 
+            key={index} 
+            className="portfolio-card group cursor-pointer transition-all duration-300 hover:scale-105"
+            onClick={() => window.open("https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20um%20projeto%20como%20" + encodeURIComponent(project.title), "_blank")}
+          >
             <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/20 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
               {/* Visual indicators */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
@@ -89,6 +93,18 @@ const PortfolioSection = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-16">
+        <a
+          href="https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-hero inline-flex items-center space-x-2"
+        >
+          <span>Quero Meu Projeto de Sucesso</span>
+        </a>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import { Camera, Play, Film, Palette, Video, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const FocusStudiosSection = () => {
-  const whatsappLink = "https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20or%C3%A7ar%20uma%20produ%C3%A7%C3%A3o%20audiovisual%20com%20a%20Focus%20Est%C3%BAdios!";
+  const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20Focus%20Est%C3%BAdios.";
 
   const highlights = [
     {
@@ -74,7 +74,11 @@ const FocusStudiosSection = () => {
         {/* Highlights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {highlights.map((highlight, index) => (
-            <Card key={index} className="card-premium group cursor-pointer">
+            <Card 
+              key={index} 
+              className="card-premium group cursor-pointer transition-all duration-300 hover:scale-105"
+              onClick={() => window.open(whatsappLink, "_blank")}
+            >
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
@@ -102,7 +106,11 @@ const FocusStudiosSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item, index) => (
-              <div key={index} className="portfolio-card group cursor-pointer">
+              <div 
+                key={index} 
+                className="portfolio-card group cursor-pointer transition-all duration-300 hover:scale-105"
+                onClick={() => window.open(whatsappLink, "_blank")}
+              >
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-secondary/10 flex items-center justify-center">
                   <div className="text-center opacity-60 group-hover:opacity-100 transition-opacity duration-300">
                     <Camera size={24} className="text-primary mb-2 mx-auto" />

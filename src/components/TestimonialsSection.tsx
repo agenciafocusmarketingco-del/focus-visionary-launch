@@ -107,6 +107,18 @@ const TestimonialsSection = () => {
           ))}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-16">
+        <a
+          href="https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-hero inline-flex items-center space-x-2"
+        >
+          <span>Quero Resultados Como Estes</span>
+        </a>
+      </div>
     </section>
   );
 };

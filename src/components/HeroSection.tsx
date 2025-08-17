@@ -6,7 +6,7 @@
 import { ChevronDown, Zap, Network, Cpu, Play } from 'lucide-react';
 import heroBg from '@/assets/hero-tech-bg.jpg';
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20para%20o%20futuro!";
+  const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es.";
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {

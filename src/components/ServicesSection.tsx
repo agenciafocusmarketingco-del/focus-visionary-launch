@@ -53,7 +53,11 @@ const ServicesSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="service-card group">
+          <div 
+            key={index} 
+            className="service-card group cursor-pointer transition-all duration-300 hover:scale-105"
+            onClick={() => window.open("https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20" + encodeURIComponent(service.title), "_blank")}
+          >
             <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
               <service.icon className="text-primary" size={32} />
             </div>
@@ -74,6 +78,18 @@ const ServicesSection = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-16">
+        <a
+          href="https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-hero inline-flex items-center space-x-2"
+        >
+          <span>Solicitar Orçamento</span>
+        </a>
       </div>
     </section>
   );

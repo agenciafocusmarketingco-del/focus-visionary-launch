@@ -12,7 +12,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { user } = useAuth();
-  const whatsappLink = "https://wa.me/5585996598809?text=Ol%C3%A1%2C%20quero%20impulsionar%20minha%20empresa%20com%20tr%C3%A1fego%20pago%20%2B%20automa%C3%A7%C3%B5es.";
+  const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es.";
   const appLink = "https://preview--focus-nexus-dash.lovable.app/auth";
   useEffect(() => {
     const handleScroll = () => {

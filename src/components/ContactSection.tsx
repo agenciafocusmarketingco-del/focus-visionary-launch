@@ -88,9 +88,11 @@ const ContactSection = () => {
                   <Textarea id="message" placeholder="Descreva seu desafio atual e objetivos..." className="mt-2 h-32" />
                 </div>
 
-                <Button size="lg" className="btn-hero w-full text-lg">
-                  Quero Impulsionar Meu Negócio
-                  <ArrowRight className="ml-2" size={20} />
+                <Button size="lg" className="btn-hero w-full text-lg" asChild>
+                  <a href="https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+                    Quero Impulsionar Meu Negócio
+                    <ArrowRight className="ml-2" size={20} />
+                  </a>
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
@@ -128,7 +130,7 @@ const ContactSection = () => {
                   Atendimento direto no WhatsApp para projetos urgentes
                 </p>
                 <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white" asChild>
-                  <a href="https://wa.me/5585996598809?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20urgente!" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
                     WhatsApp Direto
                     <Phone className="ml-2" size={18} />
                   </a>
