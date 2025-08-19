@@ -41,12 +41,7 @@ const AboutSection = () => {
         <div className="mb-16">
           <Card className="card-premium overflow-hidden">
             <div className="aspect-video bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${aboutTeamImage})`}}>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                <div className="p-8 text-white">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Nossa Equipe</h3>
-                  <p className="text-lg opacity-90">Profissionais especializados em marketing digital e tecnologia</p>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
           </Card>
         </div>
