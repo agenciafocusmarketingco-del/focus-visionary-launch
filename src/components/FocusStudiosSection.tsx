@@ -4,6 +4,10 @@
 
 import { Camera, Play, Film, Palette, Video, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import focusStudiosMainImage from '@/assets/focus-studios-main.jpg';
+import studiosPortfolio1 from '@/assets/studios-portfolio-1.jpg';
+import studiosPortfolio2 from '@/assets/studios-portfolio-2.jpg';
+import studiosPortfolio3 from '@/assets/studios-portfolio-3.jpg';
 
 const FocusStudiosSection = () => {
   const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20Focus%20Est%C3%BAdios.";
@@ -51,22 +55,20 @@ const FocusStudiosSection = () => {
           </p>
         </div>
 
-        {/* Video Showcase Placeholder */}
+        {/* Video Showcase */}
         <div className="relative mb-16">
           <Card className="card-premium overflow-hidden">
-            <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Play size={32} className="text-primary ml-1" />
+            <div className="relative aspect-video bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${focusStudiosMainImage})`}}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto backdrop-blur-sm">
+                    <Play size={32} className="text-white ml-1" />
+                  </div>
+                  <p className="text-lg font-semibold">Showreel Focus Estúdios</p>
+                  <p className="text-sm opacity-90">Conheça nossos trabalhos mais impactantes</p>
                 </div>
-                <p className="text-muted-foreground">Showreel Focus Estúdios</p>
-                <p className="text-sm text-muted-foreground/70">Conheça nossos trabalhos mais impactantes</p>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-12 h-12 border border-primary/20 rounded-full animate-pulse" />
-              <div className="absolute bottom-4 left-4 w-8 h-8 border-2 border-primary/30 rotate-45" />
-              <div className="absolute top-1/2 left-8 w-6 h-6 bg-primary/10 rounded-full animate-float" />
             </div>
           </Card>
         </div>
@@ -105,21 +107,31 @@ const FocusStudiosSection = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+            {[
+              { title: 'Filmagem Cinematográfica', subtitle: 'Campanha Premium', image: studiosPortfolio1 },
+              { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 },
+              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: studiosPortfolio3 },
+              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: studiosPortfolio1 },
+              { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: studiosPortfolio2 },
+              { title: 'Branding Visual', subtitle: 'Identidade Única', image: studiosPortfolio3 }
+            ].map((item, index) => (
               <div 
                 key={index} 
                 className="portfolio-card group cursor-pointer transition-all duration-300 hover:scale-105"
                 onClick={() => window.open(whatsappLink, "_blank")}
               >
-                <div className="aspect-video bg-gradient-to-br from-primary/5 to-secondary/10 flex items-center justify-center">
-                  <div className="text-center opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                    <Camera size={24} className="text-primary mb-2 mx-auto" />
-                    <p className="text-sm text-muted-foreground">Projeto {item}</p>
+                <div className="aspect-video bg-cover bg-center bg-no-repeat relative overflow-hidden" style={{backgroundImage: `url(${item.image})`}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-center text-white">
+                      <Camera size={24} className="mx-auto mb-2" />
+                      <p className="text-sm font-medium">{item.subtitle}</p>
+                    </div>
                   </div>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold text-foreground mb-1">Campanha Exemplo {item}</h4>
-                  <p className="text-sm text-muted-foreground">Produção audiovisual</p>
+                  <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                 </div>
               </div>
             ))}

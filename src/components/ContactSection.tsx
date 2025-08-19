@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, Rocket, Mail, Phone, MapPin } from 'lucide-react';
+import contactMeetingImage from '@/assets/contact-meeting.jpg';
 const ContactSection = () => {
   const contactInfo = [{
     icon: Mail,
@@ -104,6 +105,18 @@ const ContactSection = () => {
 
           {/* Contact Info & CTA */}
           <div className="space-y-8">
+            {/* Meeting Image */}
+            <Card className="card-premium overflow-hidden">
+              <div className="aspect-video bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: `url(${contactMeetingImage})`}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Reunião Estratégica</h3>
+                    <p className="opacity-90">Consultoria personalizada para seu negócio</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
             {/* Contact Methods */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => <Card key={index} className="card-premium">

@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Zap, Camera, Target } from 'lucide-react';
+import aboutTeamImage from '@/assets/about-team.jpg';
 const AboutSection = () => {
   const pillars = [{
     icon: Target,
@@ -34,6 +35,20 @@ const AboutSection = () => {
             A Focus é um <strong>ecossistema de inovação</strong> que conecta marketing, tecnologia e produção audiovisual 
             para criar experiências que posicionam marcas à frente do seu tempo.
           </p>
+        </div>
+
+        {/* Team Image */}
+        <div className="mb-16">
+          <Card className="card-premium overflow-hidden">
+            <div className="aspect-video bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${aboutTeamImage})`}}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="p-8 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Nossa Equipe</h3>
+                  <p className="text-lg opacity-90">Profissionais especializados em marketing digital e tecnologia</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Mission Statement */}
