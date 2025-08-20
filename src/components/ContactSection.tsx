@@ -9,7 +9,7 @@ const ContactSection = () => {
   const contactInfo = [{
     icon: Mail,
     title: 'E-mail',
-    content: 'contato@focus.com.br',
+    content: 'agenciafocusmarketing.co@gmail.com',
     description: 'Resposta em até 2 horas'
   }, {
     icon: Phone,
@@ -19,7 +19,7 @@ const ContactSection = () => {
   }, {
     icon: MapPin,
     title: 'Escritório',
-    content: 'São Paulo, SP',
+    content: 'Fortaleza, CE',
     description: 'Atendemos todo Brasil'
   }];
   return <section id="contact" className="section-padding bg-gradient-subtle">
