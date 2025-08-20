@@ -40,7 +40,9 @@ const AboutSection = () => {
         {/* Team Image */}
         <div className="mb-16">
           <Card className="card-premium overflow-hidden">
-            <div className="aspect-video bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${aboutTeamImage})`}}>
+            <div className="aspect-video bg-cover bg-center bg-no-repeat" style={{
+            backgroundImage: `url(${aboutTeamImage})`
+          }}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
           </Card>
@@ -71,7 +73,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl focus-subheading text-secondary mb-4">
+                <h3 className="text-xl focus-subheading mb-4 text-slate-50">
                   {pillar.title}
                 </h3>
                 
