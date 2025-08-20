@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-primary" />
-                <span className="text-foreground">Fortaleza, CE</span>
+                <span className="text-foreground">R. Barbosa de Freitas, 1741 - Aldeota, Fortaleza - CE, 60170-021</span>
               </div>
             </div>
 
