@@ -26,22 +26,12 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="text-foreground hover:text-primary p-2"
-                asChild
-              >
+              <Button variant="ghost" size="sm" className="text-foreground hover:text-primary p-2" asChild>
                 <a href="https://www.instagram.com/focusmarketing.co/" target="_blank" rel="noopener noreferrer">
                   <Instagram size={20} />
                 </a>
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="text-foreground hover:text-primary p-2"
-                asChild
-              >
+              <Button variant="ghost" size="sm" className="text-foreground hover:text-primary p-2" asChild>
                 <a href="https://www.linkedin.com/company/focus-marketing-co/" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} />
                 </a>
@@ -130,9 +120,7 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-foreground/80 text-sm">
-            © 2024 Focus Agency. Todos os direitos reservados.
-          </div>
+          <div className="text-foreground/80 text-sm">© 2024 Focus Company. Todos os direitos reservados.</div>
           
           <div className="flex items-center gap-6">
             <a href="#" className="text-foreground hover:text-primary text-sm transition-colors">
