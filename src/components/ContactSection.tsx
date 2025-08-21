@@ -46,7 +46,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="card-premium">
             <CardContent className="p-8">
-              <h3 className="text-2xl focus-subheading text-secondary mb-6">
+              <h3 className="text-2xl focus-subheading mb-6 text-gray-50">
                 Agendar Reunião Estratégica
               </h3>
               
@@ -85,7 +85,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-secondary">Conte-nos sobre seu projeto*</Label>
+                  <Label htmlFor="message" className="text-secondary bg-zinc-950">Conte-nos sobre seu projeto*</Label>
                   <Textarea id="message" placeholder="Descreva seu desafio atual e objetivos..." className="mt-2 h-32" />
                 </div>
 
@@ -107,7 +107,9 @@ const ContactSection = () => {
           <div className="space-y-8">
             {/* Meeting Image */}
             <Card className="card-premium overflow-hidden">
-              <div className="aspect-video bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: `url(${contactMeetingImage})`}}>
+              <div className="aspect-video bg-cover bg-center bg-no-repeat relative" style={{
+              backgroundImage: `url(${contactMeetingImage})`
+            }}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                   <div className="p-6 text-white">
                     <h3 className="text-xl font-bold mb-2">Reunião Estratégica</h3>
@@ -125,7 +127,7 @@ const ContactSection = () => {
                       <info.icon size={24} className="text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-secondary">{info.title}</h4>
+                      <h4 className="font-semibold text-gray-50">{info.title}</h4>
                       <p className="text-lg text-primary font-medium">{info.content}</p>
                       <p className="text-sm text-muted-foreground">{info.description}</p>
                     </div>
@@ -136,7 +138,7 @@ const ContactSection = () => {
             {/* Quick CTA */}
             <Card className="card-premium bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl focus-subheading text-secondary mb-4">
+                <h3 className="text-2xl focus-subheading mb-4 text-slate-50">
                   Pressa? Fale Conosco Agora
                 </h3>
                 <p className="text-muted-foreground mb-6">
