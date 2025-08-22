@@ -44,13 +44,11 @@ const TestimonialsSection = () => {
     label: 'Satisfação',
     icon: '⭐'
   }];
-  return <section id="testimonials" className="py-24 bg-background">
+  return <section id="testimonials" className="bg-background py-[50px]">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            O Que Nossos Clientes Dizem
-          </h2>
+          
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Resultados reais de empresas que confiaram na Focus Marketing
           </p>
