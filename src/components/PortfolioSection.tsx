@@ -2,62 +2,44 @@
  * PortfolioSection - Portfolio showcase
  */
 
-import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
-import portfolioMedical from '@/assets/portfolio-medical.jpg';
-import portfolioSaas from '@/assets/portfolio-saas.jpg';
-import portfolioFintech from '@/assets/portfolio-fintech.jpg';
-import portfolioFranchise from '@/assets/portfolio-franchise.jpg';
-import portfolioElearning from '@/assets/portfolio-elearning.jpg';
+import portfolioCreativeContent from '@/assets/portfolio-creative-content.jpg';
+import portfolioDigitalCampaign from '@/assets/portfolio-digital-campaign.jpg';
+import portfolioVisualBranding from '@/assets/portfolio-visual-branding.jpg';
+import portfolioCommercialProduction from '@/assets/portfolio-commercial-production.jpg';
 
 const PortfolioSection = () => {
   const projects = [
     { 
-      title: 'E-commerce Fashion', 
-      category: 'Marketing & Growth', 
+      title: 'Conteúdo Criativo', 
+      category: 'Copywriting & Roteiros', 
       result: '15x ROAS',
       metrics: '+1.2M em vendas',
-      description: 'Campanha completa de tráfego pago com foco em conversão',
-      image: portfolioEcommerce
+      description: 'Criação de roteiros e copy persuasivos que convertem',
+      image: portfolioCreativeContent
     },
     { 
-      title: 'Clínica Médica Premium', 
-      category: 'Focus Estúdios + Marketing', 
+      title: 'Campanha Digital', 
+      category: 'Redes Sociais & Ads', 
       result: '+400 leads/mês',
       metrics: '85% taxa conversão',
-      description: 'Produção audiovisual + landing pages otimizadas',
-      image: portfolioMedical
+      description: 'Estratégias digitais integradas em todas as plataformas',
+      image: portfolioDigitalCampaign
     },
     { 
-      title: 'SaaS B2B Tecnologia', 
-      category: 'Automação + Marketing', 
+      title: 'Branding Visual', 
+      category: 'Identidade & Design', 
       result: '70% economia',
       metrics: '300% crescimento',
-      description: 'Sistema completo de CRM + automações de vendas',
-      image: portfolioSaas
+      description: 'Criação completa de identidade visual e posicionamento',
+      image: portfolioVisualBranding
     },
     { 
-      title: 'Startup Fintech', 
-      category: 'Consultoria Estratégica', 
-      result: '500% crescimento',
-      metrics: 'Series A em 8 meses',
-      description: 'Estratégia completa de go-to-market e positioning',
-      image: portfolioFintech
-    },
-    { 
-      title: 'Rede de Franquias', 
+      title: 'Produção Comercial', 
       category: 'Focus Estúdios', 
       result: '+200% brand awareness',
       metrics: '50 campanhas criativas',
-      description: 'Campanha nacional com produção audiovisual completa',
-      image: portfolioFranchise
-    },
-    { 
-      title: 'E-learning Platform', 
-      category: 'Tecnologia & Marketing', 
-      result: '1000+ leads/dia',
-      metrics: 'R$ 2M+ faturamento',
-      description: 'Plataforma custom + estratégia de crescimento escalável',
-      image: portfolioElearning
+      description: 'Produção audiovisual profissional e campanhas criativas',
+      image: portfolioCommercialProduction
     }
   ];
 
