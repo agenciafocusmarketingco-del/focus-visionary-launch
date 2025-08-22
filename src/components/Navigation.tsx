@@ -50,7 +50,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('#portfolio')} className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium">
               Cases
             </button>
-            <button onClick={() => scrollToSection('#testimonials')} className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium">
+            <button onClick={() => scrollToSection('#clients')} className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium">
               Depoimentos
             </button>
             <button onClick={() => scrollToSection('#contact')} className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium">
@@ -101,7 +101,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('#portfolio')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">
               Cases
             </button>
-            <button onClick={() => scrollToSection('#testimonials')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">
+            <button onClick={() => scrollToSection('#clients')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">
               Depoimentos
             </button>
             <button onClick={() => scrollToSection('#contact')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">

@@ -24,7 +24,7 @@ const ClientsSection = () => {
     result: '+80% eficiência'
   }];
   const clientLogos = ['TechStart', 'FashionBrand', 'ConsultBiz', 'InnovaCorp', 'DigitalPro', 'GrowthLab'];
-  return <section className="section-padding bg-secondary text-white">
+  return <section id="clients" className="section-padding bg-secondary text-white">
       <div className="max-w-7xl mx-auto py-[10px]">
         {/* Header */}
         <div className="text-center mb-16">
