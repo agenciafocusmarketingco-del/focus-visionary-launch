@@ -5,10 +5,9 @@
 import { Camera, Play, Film, Palette, Video, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import focusStudiosMainImage from '@/assets/focus-studios-main.jpg';
-import studiosStorytellingVisual from '@/assets/studios-storytelling-visual.jpg';
-import studiosDigitalCampaign from '@/assets/studios-digital-campaign.jpg';
-import studiosCommercialProduction from '@/assets/studios-commercial-production.jpg';
-import studiosVisualBranding from '@/assets/studios-visual-branding.jpg';
+import studiosPortfolio1 from '@/assets/studios-portfolio-1.jpg';
+import studiosPortfolio2 from '@/assets/studios-portfolio-2.jpg';
+import studiosPortfolio3 from '@/assets/studios-portfolio-3.jpg';
 
 const FocusStudiosSection = () => {
   const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20Focus%20Est%C3%BAdios.";
@@ -109,12 +108,12 @@ const FocusStudiosSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Storytelling Visual', subtitle: 'Narrativa e Conexão Emocional', image: studiosStorytellingVisual },
-              { title: 'Campanha Digital', subtitle: 'Anúncios e Redes Sociais', image: studiosDigitalCampaign },
-              { title: 'Produção Comercial', subtitle: 'Bastidores e Filmagem em Estúdio', image: studiosCommercialProduction },
-              { title: 'Branding Visual', subtitle: 'Identidade Visual e Design de Marca', image: studiosVisualBranding },
-              { title: 'Storytelling Visual', subtitle: 'Narrativa e Conexão Emocional', image: studiosStorytellingVisual },
-              { title: 'Campanha Digital', subtitle: 'Anúncios e Redes Sociais', image: studiosDigitalCampaign }
+              { title: 'Filmagem Cinematográfica', subtitle: 'Campanha Premium', image: studiosPortfolio1 },
+              { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 },
+              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: studiosPortfolio3 },
+              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: studiosPortfolio1 },
+              { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: studiosPortfolio2 },
+              { title: 'Branding Visual', subtitle: 'Identidade Única', image: studiosPortfolio3 }
             ].map((item, index) => (
               <div 
                 key={index} 

@@ -44,57 +44,60 @@ const TestimonialsSection = () => {
     label: 'Satisfação',
     icon: '⭐'
   }];
-
+  
   return (
-    <section id="testimonials" className="section-container bg-secondary/20">
+    <section id="testimonials" className="section-container bg-secondary/5">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-6xl focus-heading text-foreground mb-6">
-          Clientes que <span className="gradient-text">Confiam</span>
+          O que nossos <span className="gradient-text">clientes</span> falam
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Mais de 47 empresas já transformaram seus negócios com nossas estratégias
+          Histórias reais de transformação e crescimento exponencial
         </p>
       </div>
-
-      {/* Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-        {metrics.map((metric, index) => (
-          <div key={index} className="text-center">
-            <div className="text-4xl mb-2">{metric.icon}</div>
-            <div className="text-3xl font-bold text-primary mb-1">{metric.value}</div>
-            <div className="text-sm text-muted-foreground">{metric.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Testimonials */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="portfolio-card p-6">
+          <div key={index} className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="mb-4">
+              <Quote size={24} className="text-primary" />
+            </div>
+            
+            <p className="text-muted-foreground mb-6 leading-relaxed italic">
+              "{testimonial.content}"
+            </p>
+            
             <div className="flex items-center gap-1 mb-4">
               {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} size={16} className="fill-primary text-primary" />
+                <Star key={i} size={16} className="text-primary fill-current" />
               ))}
             </div>
             
-            <Quote size={20} className="text-primary mb-4" />
-            
-            <p className="text-muted-foreground mb-6">{testimonial.content}</p>
-            
-            <div className="border-t pt-4">
-              <div className="flex justify-between items-center">
-                <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role} • {testimonial.company}</div>
-                </div>
-                <div className="text-primary font-bold text-sm">{testimonial.results}</div>
-              </div>
+            <div className="mb-4">
+              <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                {testimonial.results}
+              </span>
             </div>
+            
+            <div className="border-t border-border pt-4">
+              <div className="font-semibold text-foreground">{testimonial.name}</div>
+              <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+              <div className="text-sm text-primary">{testimonial.company}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {metrics.map((metric, index) => (
+          <div key={index} className="text-center">
+            <div className="text-3xl mb-2">{metric.icon}</div>
+            <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
+            <div className="text-muted-foreground text-sm">{metric.label}</div>
           </div>
         ))}
       </div>
     </section>
   );
 };
-
 export default TestimonialsSection;
