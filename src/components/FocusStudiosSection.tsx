@@ -118,7 +118,7 @@ const FocusStudiosSection = () => {
               <div 
                 key={index} 
                 className="portfolio-card group cursor-pointer transition-all duration-300 hover:scale-105"
-                onClick={() => window.open(whatsappLink, "_blank")}
+                onClick={() => window.open("https://lovable.dev/projects/2d36f24e-a4c5-4cef-a65c-6f78dde55502", "_blank")}
               >
                 <div className="aspect-video bg-cover bg-center bg-no-repeat relative overflow-hidden" style={{backgroundImage: `url(${item.image})`}}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
