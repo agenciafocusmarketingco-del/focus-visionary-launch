@@ -25,7 +25,7 @@ const ContactSection = () => {
   return <section id="contact" className="section-padding bg-gradient-subtle">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 py-[70px]">
+        <div className="text-center mb-16 py-[90px]">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-6">
             <Rocket size={16} />
             <span className="text-sm font-medium">Vamos Conversar</span>
