@@ -108,12 +108,12 @@ const FocusStudiosSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: '/lovable-uploads/ed07d16f-3adf-4d3d-96ec-c6704e10b009.png' },
+              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: '/lovable-uploads/47bb9fa1-e249-4b5a-98cf-99943fbfc093.png' },
+              { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: '/lovable-uploads/af3b9831-031b-4ef7-b53d-4aa28497f3d1.png' },
+              { title: 'Branding Visual', subtitle: 'Identidade Única', image: '/lovable-uploads/e51f5861-9342-4600-bfe2-0477994b5555.png' },
               { title: 'Filmagem Cinematográfica', subtitle: 'Campanha Premium', image: studiosPortfolio1 },
-              { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 },
-              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: studiosPortfolio3 },
-              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: studiosPortfolio1 },
-              { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: studiosPortfolio2 },
-              { title: 'Branding Visual', subtitle: 'Identidade Única', image: studiosPortfolio3 }
+              { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 }
             ].map((item, index) => (
               <div 
                 key={index} 
