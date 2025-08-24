@@ -25,7 +25,7 @@ const ClientsSection = () => {
   }];
   const clientLogos = ['TechStart', 'FashionBrand', 'ConsultBiz', 'InnovaCorp', 'DigitalPro', 'GrowthLab'];
   return <section id="clients" className="section-padding bg-secondary text-white">
-      <div className="max-w-7xl mx-auto py-[10px]">
+      <div className="max-w-7xl mx-auto py-[10px] bg-zinc-950">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary mb-6">
