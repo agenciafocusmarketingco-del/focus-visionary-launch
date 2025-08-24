@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo with premium styling */}
           <div className="flex-shrink-0">
-            <img src={focusLogo} alt="Focus Marketing - Agência de Marketing Digital" className="h-12 w-auto transition-all duration-300 hover:scale-105" />
+            <img src={focusLogo} alt="Focus Marketing - Agência de Marketing Digital" className="h-16 w-auto transition-all duration-300 hover:scale-105" />
           </div>
 
           {/* Desktop Navigation */}
@@ -78,8 +78,20 @@ const Navigation = () => {
           </div>
 
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile actions - Profile + Menu */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Profile icon for mobile */}
+            <a 
+              href={appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
+              title="Acessar App Focus"
+            >
+              <User size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
+            </a>
+            
+            {/* Menu button */}
             <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-lg text-foreground hover:text-primary transition-colors duration-200">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -107,16 +119,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('#contact')} className="block w-full text-left text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2">
               Contato
             </button>
-            <div className="pt-4 border-t border-border/50 space-y-3">
-              <a 
-                href={appLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full btn-outline justify-center inline-flex items-center space-x-2"
-              >
-                <User size={18} />
-                <span>Acessar App</span>
-              </a>
+            <div className="pt-4 border-t border-border/50">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero w-full justify-center inline-flex items-center space-x-2">
                 <MessageCircle size={18} />
                 <span>Começar Agora</span>
