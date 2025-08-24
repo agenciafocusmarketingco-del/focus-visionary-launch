@@ -59,7 +59,12 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {company.map((item, index) => <li key={index}>
-                  <a href="#" className="text-foreground hover:text-primary transition-colors duration-200">
+                  <a 
+                    href={item === 'Portfolio' ? 'https://lovable.dev/projects/2d36f24e-a4c5-4cef-a65c-6f78dde55502' : '#'} 
+                    className="text-foreground hover:text-primary transition-colors duration-200"
+                    target={item === 'Portfolio' ? '_blank' : '_self'}
+                    rel={item === 'Portfolio' ? 'noopener noreferrer' : undefined}
+                  >
                     {item}
                   </a>
                 </li>)}
