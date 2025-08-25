@@ -46,11 +46,37 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
-              {services.map((service, index) => <li key={index}>
-                  <a href="#" className="text-foreground hover:text-primary transition-colors duration-200">
-                    {service}
-                  </a>
-                </li>)}
+              {services.map((service, index) => {
+                const getServiceLink = (serviceName: string) => {
+                  const serviceMap: { [key: string]: string } = {
+                    'Marketing Digital': '#services',
+                    'Produção Audiovisual': '#services',
+                    'Automação & IA': '#services',
+                    'CRM Inteligente': '#services',
+                    'Growth Hacking': '#services',
+                    'Branding': '#services'
+                  };
+                  return serviceMap[serviceName] || '#services';
+                };
+
+                return (
+                  <li key={index}>
+                    <a 
+                      href={getServiceLink(service)} 
+                      className="text-foreground hover:text-primary transition-colors duration-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const target = document.querySelector('#services');
+                        if (target) {
+                          target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
+                      {service}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -58,16 +84,48 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
-              {company.map((item, index) => <li key={index}>
-                  <a 
-                    href={item === 'Portfolio' ? 'https://lovable.dev/projects/2d36f24e-a4c5-4cef-a65c-6f78dde55502' : '#'} 
-                    className="text-foreground hover:text-primary transition-colors duration-200"
-                    target={item === 'Portfolio' ? '_blank' : '_self'}
-                    rel={item === 'Portfolio' ? 'noopener noreferrer' : undefined}
-                  >
-                    {item}
-                  </a>
-                </li>)}
+              {company.map((item, index) => {
+                const getCompanyLink = (itemName: string) => {
+                  const linkMap: { [key: string]: string } = {
+                    'Sobre Nós': '#about',
+                    'Portfolio': 'https://lovable.dev/projects/2d36f24e-a4c5-4cef-a65c-6f78dde55502',
+                    'Cases de Sucesso': '#testimonials',
+                    'Blog': '#',
+                    'Carreiras': '#',
+                    'Contato': '#contact'
+                  };
+                  return linkMap[itemName] || '#';
+                };
+
+                const isExternalLink = (itemName: string) => {
+                  return itemName === 'Portfolio' || itemName === 'Blog' || itemName === 'Carreiras';
+                };
+
+                const handleClick = (e: React.MouseEvent, itemName: string) => {
+                  if (isExternalLink(itemName)) return;
+                  
+                  e.preventDefault();
+                  const targetId = getCompanyLink(itemName).replace('#', '');
+                  const target = document.querySelector(`#${targetId}`);
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  }
+                };
+
+                return (
+                  <li key={index}>
+                    <a 
+                      href={getCompanyLink(item)} 
+                      className="text-foreground hover:text-primary transition-colors duration-200"
+                      onClick={(e) => handleClick(e, item)}
+                      target={isExternalLink(item) ? '_blank' : '_self'}
+                      rel={isExternalLink(item) ? 'noopener noreferrer' : undefined}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
