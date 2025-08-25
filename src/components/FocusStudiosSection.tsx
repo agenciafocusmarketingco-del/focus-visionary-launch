@@ -112,7 +112,7 @@ const FocusStudiosSection = () => {
             {[
               { title: 'Filmagem Cinematográfica', subtitle: 'Campanha Premium', image: studiosPortfolio1 },
               { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 },
-              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: 'public/lovable-uploads/01961eb0-538c-4366-984d-9585912a92a6.png' },
+              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: '/lovable-uploads/ea1b1010-ba34-4aec-a32d-c221641700b0.png' },
               { title: 'Branding Visual', subtitle: 'Identidade Única', image: '/lovable-uploads/e51f5861-9342-4600-bfe2-0477994b5555.png' },
               { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: digitalCampaignNew },
               { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: '/lovable-uploads/47bb9fa1-e249-4b5a-98cf-99943fbfc093.png' }
