@@ -35,7 +35,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo with premium styling */}
           <div className="flex-shrink-0">
-            <img src={focusLogo} alt="Focus Marketing - Agência de Marketing Digital" className="h-16 w-auto transition-all duration-300 hover:scale-105" />
+            <Link to="/" className="block">
+              <img src={focusLogo} alt="Focus Marketing - Agência de Marketing Digital" className="h-16 w-auto transition-all duration-300 hover:scale-105" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
