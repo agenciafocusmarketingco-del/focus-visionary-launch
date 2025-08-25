@@ -10,6 +10,7 @@ import studiosPortfolio2 from '@/assets/studios-portfolio-2.jpg';
 import studiosPortfolio3 from '@/assets/studios-portfolio-3.jpg';
 import digitalCampaignNew from '@/assets/digital-campaign-new.jpg';
 
+
 const FocusStudiosSection = () => {
   const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20Focus%20Est%C3%BAdios.";
 
@@ -111,10 +112,10 @@ const FocusStudiosSection = () => {
             {[
               { title: 'Filmagem Cinematográfica', subtitle: 'Campanha Premium', image: studiosPortfolio1 },
               { title: 'Campanha Publicitária', subtitle: 'Produção Criativa', image: studiosPortfolio2 },
-              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: '/lovable-uploads/ed07d16f-3adf-4d3d-96ec-c6704e10b009.png' },
-              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: '/lovable-uploads/47bb9fa1-e249-4b5a-98cf-99943fbfc093.png' },
+              { title: 'Conteúdo Criativo', subtitle: 'Storytelling Visual', image: 'public/lovable-uploads/01961eb0-538c-4366-984d-9585912a92a6.png' },
+              { title: 'Branding Visual', subtitle: 'Identidade Única', image: '/lovable-uploads/e51f5861-9342-4600-bfe2-0477994b5555.png' },
               { title: 'Campanha Digital', subtitle: 'Multiplataforma', image: digitalCampaignNew },
-              { title: 'Branding Visual', subtitle: 'Identidade Única', image: '/lovable-uploads/e51f5861-9342-4600-bfe2-0477994b5555.png' }
+              { title: 'Produção Comercial', subtitle: 'Alto Impacto', image: '/lovable-uploads/47bb9fa1-e249-4b5a-98cf-99943fbfc093.png' }
             ].map((item, index) => (
               <div 
                 key={index} 
