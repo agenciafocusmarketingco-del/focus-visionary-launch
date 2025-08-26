@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Mail, Phone, MapPin, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 const Footer = () => {
-  const services = ['Marketing Digital', 'Produção Audiovisual', 'Automação & IA', 'CRM Inteligente', 'Growth Hacking', 'Branding'];
+  const services = ['Marketing Digital', 'Produção Audiovisual', 'Automação & IA', 'CRM Inteligente', 'Tráfego Pago', 'Branding'];
   const company = ['Sobre Nós', 'Portfolio', 'Cases de Sucesso', 'Blog', 'Carreiras', 'Contato'];
   const scrollToTop = () => {
     window.scrollTo({
@@ -53,7 +53,7 @@ const Footer = () => {
                     'Produção Audiovisual': '#services',
                     'Automação & IA': '#services',
                     'CRM Inteligente': '#services',
-                    'Growth Hacking': '#services',
+                    'Tráfego Pago': '#services',
                     'Branding': '#services'
                   };
                   return serviceMap[serviceName] || '#services';
