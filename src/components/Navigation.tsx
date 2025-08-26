@@ -35,9 +35,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo with premium styling */}
           <div className="flex-shrink-0">
-            <Link to="/" className="block">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="block"
+            >
               <img src={focusLogo} alt="Focus Marketing - Agência de Marketing Digital" className="h-16 w-auto transition-all duration-300 hover:scale-105" />
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
