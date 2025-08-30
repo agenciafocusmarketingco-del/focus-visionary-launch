@@ -17,6 +17,80 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17508313736"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Consent Mode v2 (padrão: negado até o usuário aceitar)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+
+      // Config do Google Ads
+      gtag('config', 'AW-17508313736');
+
+      // Função para aceitar cookies
+      function aceitarCookies() {
+        localStorage.setItem('consentimento', 'aceito');
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+        const banner = document.getElementById('banner-consent');
+        if (banner) banner.style.display = 'none';
+      }
+
+      // Inicializar consentimento
+      (function initConsent(){
+        if (localStorage.getItem('consentimento') === 'aceito') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+          });
+        } else {
+          document.addEventListener('DOMContentLoaded', function(){
+            const banner = document.getElementById('banner-consent');
+            if (banner) banner.style.display = 'block';
+          });
+        }
+      })();
+
+      // Eventos de conversão
+      document.addEventListener('DOMContentLoaded', function(){
+        // Clique em botão de WhatsApp
+        document.addEventListener('click', function(e){
+          const btn = e.target.closest('a[href*="whatsapp"]');
+          if (btn && typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17508313736/WHATSAPP_LABEL'
+            });
+          }
+        });
+
+        // Envio de formulário de contato
+        const forms = document.querySelectorAll('form');
+        forms.forEach(function(form){
+          form.addEventListener('submit', function(){
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17508313736/FORM_LABEL'
+              });
+            }
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>

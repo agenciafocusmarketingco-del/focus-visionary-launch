@@ -8,6 +8,7 @@ import ClientsSection from '@/components/ClientsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };
