@@ -40,11 +40,7 @@ const AboutSection = () => {
         {/* Team Image */}
         <div className="mb-16">
           <Card className="card-premium overflow-hidden">
-            <div className="aspect-video bg-cover bg-center bg-no-repeat" style={{
-            backgroundImage: `url(${aboutTeamImage})`
-          }}>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
+            
           </Card>
         </div>
 
