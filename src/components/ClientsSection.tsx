@@ -1,5 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import climatizeLogo from '@/assets/client-climatize.png';
+import thalesPontesLogo from '@/assets/client-thales-pontes.png';
+import jkLogo from '@/assets/client-jk.png';
+import casaLogo from '@/assets/client-casa.png';
+import enjoySurfLogo from '@/assets/client-enjoy-surf.png';
+import postoLimpezaLogo from '@/assets/client-posto-limpeza.png';
 const ClientsSection = () => {
   const testimonials = [{
     name: 'Carlos Mendes',
@@ -23,7 +29,14 @@ const ClientsSection = () => {
     rating: 5,
     result: '+80% eficiência'
   }];
-  const clientLogos = ['TechStart', 'FashionBrand', 'ConsultBiz', 'InnovaCorp', 'DigitalPro', 'GrowthLab'];
+  const clientLogos = [
+    { name: 'Climatize', logo: climatizeLogo },
+    { name: 'Thales Pontes Advocacia', logo: thalesPontesLogo },
+    { name: 'JK Contabilidade', logo: jkLogo },
+    { name: 'Casa dos Parafusos', logo: casaLogo },
+    { name: 'Enjoy Surf School', logo: enjoySurfLogo },
+    { name: 'Posto da Limpeza', logo: postoLimpezaLogo }
+  ];
   return <section id="clients" className="section-padding bg-secondary text-white">
       <div className="max-w-7xl mx-auto bg-zinc-950 py-[20px]">
         {/* Header */}
@@ -85,11 +98,14 @@ const ClientsSection = () => {
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60">
-            {clientLogos.map((logo, index) => <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <span className="text-white font-bold text-sm">{logo[0]}</span>
+            {clientLogos.map((client, index) => <div key={index} className="text-center">
+                <div className="w-24 h-24 bg-white/5 rounded-lg flex items-center justify-center mx-auto mb-2 p-3">
+                  <img 
+                    src={client.logo} 
+                    alt={client.name}
+                    className="w-full h-full object-contain grayscale brightness-200"
+                  />
                 </div>
-                <span className="text-foreground/80 text-sm">{logo}</span>
               </div>)}
           </div>
         </div>
