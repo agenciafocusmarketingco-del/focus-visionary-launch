@@ -97,16 +97,24 @@ const ClientsSection = () => {
             Empresas que já transformaram com a Focus
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60">
-            {clientLogos.map((client, index) => <div key={index} className="text-center">
-                <div className="w-24 h-24 bg-white/5 rounded-lg flex items-center justify-center mx-auto mb-2 p-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center">
+            {clientLogos.map((client, index) => (
+              <div 
+                key={index} 
+                className="text-center group hover-scale"
+              >
+                <div className="w-28 h-28 bg-white/5 rounded-xl flex items-center justify-center mx-auto mb-4 p-4 border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-primary/30">
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="w-full h-full object-contain grayscale brightness-200"
+                    className="w-full h-full object-contain grayscale brightness-150 contrast-125 transition-all duration-300 group-hover:brightness-200"
                   />
                 </div>
-              </div>)}
+                <span className="text-foreground/70 text-sm font-light tracking-wide transition-colors duration-300 group-hover:text-foreground/90">
+                  {client.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
