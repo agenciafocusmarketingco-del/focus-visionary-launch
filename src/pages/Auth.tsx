@@ -55,17 +55,27 @@ const Auth = () => {
       } else {
         const { error } = await signUp(email, password, firstName, lastName);
         if (error) {
-          if (error.message.includes('already registered')) {
-            setError('Este email já está cadastrado. Faça login ou use outro email.');
+          // Detectar se é um cadastro repetido
+          const errorMsg = error.message.toLowerCase();
+          if (errorMsg.includes('user already registered') || 
+              errorMsg.includes('already registered') ||
+              errorMsg.includes('already been registered') ||
+              errorMsg.includes('duplicate')) {
+            setError('⚠️ Este email já está cadastrado! Use a aba "Entrar" para fazer login ou recuperar sua senha.');
           } else {
             setError(error.message);
           }
         } else {
           toast({
-            title: "Conta criada com sucesso!",
-            description: "Verifique seu email para confirmar sua conta antes de fazer login.",
-            duration: 7000,
+            title: "✅ Conta criada com sucesso!",
+            description: "⚠️ IMPORTANTE: Verifique seu email (incluindo spam) para confirmar sua conta. Sem confirmação, você não conseguirá fazer login.",
+            duration: 10000,
           });
+          // Limpar os campos após sucesso
+          setEmail('');
+          setPassword('');
+          setFirstName('');
+          setLastName('');
           setIsLogin(true);
         }
       }
