@@ -38,7 +38,13 @@ const Auth = () => {
       if (isLogin) {
         const { error } = await signIn(email, password);
         if (error) {
-          setError(error.message);
+          if (error.message.includes('Invalid login credentials')) {
+            setError('Email ou senha incorretos. Se você acabou de se cadastrar, verifique seu email para confirmar a conta antes de fazer login.');
+          } else if (error.message.includes('Email not confirmed')) {
+            setError('Por favor, confirme seu email antes de fazer login. Verifique sua caixa de entrada.');
+          } else {
+            setError(error.message);
+          }
         } else {
           toast({
             title: "Login realizado com sucesso!",
@@ -49,11 +55,16 @@ const Auth = () => {
       } else {
         const { error } = await signUp(email, password, firstName, lastName);
         if (error) {
-          setError(error.message);
+          if (error.message.includes('already registered')) {
+            setError('Este email já está cadastrado. Faça login ou use outro email.');
+          } else {
+            setError(error.message);
+          }
         } else {
           toast({
             title: "Conta criada com sucesso!",
-            description: "Verifique seu email para confirmar sua conta.",
+            description: "Verifique seu email para confirmar sua conta antes de fazer login.",
+            duration: 7000,
           });
           setIsLogin(true);
         }
