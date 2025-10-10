@@ -13,7 +13,6 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { user } = useAuth();
   const whatsappLink = "https://wa.me/558596598809?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Focus%20Marketing%20e%20quero%20mais%20informa%C3%A7%C3%B5es.";
-  const appLink = "https://preview--focus-nexus-dash.lovable.app/auth";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -66,15 +65,13 @@ const Navigation = () => {
           {/* Profile Icon & Premium CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Ícone de perfil/app sempre visível */}
-            <a 
-              href={appLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to={user ? "/profile" : "/auth"}
               className="p-3 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
-              title="Acessar App Focus"
+              title={user ? "Meu Perfil" : "Login / Cadastro"}
             >
               <User size={20} className="text-foreground group-hover:text-primary transition-colors duration-300" />
-            </a>
+            </Link>
             
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-hero inline-flex items-center space-x-2 group">
               <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
@@ -86,15 +83,13 @@ const Navigation = () => {
           {/* Mobile actions - Profile + Menu */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Profile icon for mobile */}
-            <a 
-              href={appLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to={user ? "/profile" : "/auth"}
               className="p-2 rounded-full border border-border/30 bg-background/10 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 group"
-              title="Acessar App Focus"
+              title={user ? "Meu Perfil" : "Login / Cadastro"}
             >
               <User size={18} className="text-foreground group-hover:text-primary transition-colors duration-300" />
-            </a>
+            </Link>
             
             {/* Menu button */}
             <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-lg text-foreground hover:text-primary transition-colors duration-200">
